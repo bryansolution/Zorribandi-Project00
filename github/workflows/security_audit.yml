@@ -1,29 +1,48 @@
-name: "Zorri-Audit-Automatizado"
+name: "🦨🛡️ PROTOCOLO ZORRIBANDI: SEGURIDAD MASIVA"
 
+# 🦨🛡️ Disparadores limitados para evitar ataques de inyección en PRs
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
+  schedule:
+    - cron: '30 2 * * 1' # Escaneo profundo cada lunes a las 2:30 AM
+
+# 🦨🛡️ Hardening de permisos: Bloqueo total de escritura en el repositorio
+permissions:
+  contents: read
+  security-events: write # Solo para reportar hallazgos en la pestaña de seguridad
 
 jobs:
-  analyze:
-    name: Análisis de Vulnerabilidades
+  audit-masivo:
+    name: 🦨🛡️ Scanner de Élite
     runs-on: ubuntu-latest
-    permissions:
-      security-events: write
+    timeout-minutes: 15 # Evita ataques de denegación de servicio en el pipeline
 
     steps:
-    - name: Checkout del código
-      uses: actions/checkout@v3
+      - name: 🦨🛡️ Blindaje de Código Fuente
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false # No deja rastro del token de GitHub
 
-    - name: Inicializar CodeQL (Motor de Búsqueda de Fallos)
-      uses: github/codeql-action/init@v2
-      with:
-        languages: python # O el lenguaje que uses
+      - name: 🦨🛡️ Detección de Fugas (Secret Scanning)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
+      - name: 🦨🛡️ Inicializar Motor de Inteligencia (CodeQL)
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+          # 'security-extended' busca vulnerabilidades más profundas que el escaneo normal
+          queries: security-extended,security-and-quality
 
-    - name: Ejecutar Análisis
-      uses: github/codeql-action/analyze@v2
+      - name: 🦨🛡️ Análisis de Flujo de Datos Masivo
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:python"
+
+      - name: 🦨🛡️ Verificación de Dependencias (Dependency Review)
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@v4
