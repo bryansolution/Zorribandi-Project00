@@ -1,36 +1,22 @@
-# 🦨🛡️ ESTRATEGIA ZORRIBANDI: WHITE-LIST ONLY
-# Bloqueo total de archivos para máxima seguridad operacional.
-
-# 1. Bloquear absolutamente todo por defecto
-*
-.*
-
-# 2. Permitir carpetas necesarias (pero no su contenido aún)
-!*/
-
-# 3. EXCEPCIONES EXPLÍCITAS (Solo lo que es seguro mostrar)
-!README.md
-!SECURITY.md
-!.gitignore
-!.github/
-!.github/workflows/
-
-# 4. Permitir código fuente (ajusta según tu lenguaje)
-# Solo permite archivos .py y .sh si tú lo decides
-!*.py
-!*.sh
-
-# 5. RE-BLOQUEO DE SEGURIDAD (Incluso si están en carpetas permitidas)
-# Nunca, bajo ninguna circunstancia, permitir estos archivos
-.env
-*.env
-*secret*
-*token*
-*key*
-*cred*
+cat <<EOF > .gitignore
+# 🦨🛡️ ZORRIBANDI ULTRA-WIDE GITIGNORE
+# Bloqueo de datos de investigación
+data/
+results/
 *.log
 *.pcap
 *.nmap
-*.bak
+*.json
+!data/.gitkeep
+
+# Bloqueo de entorno Python
 __pycache__/
-.git/
+*.pyc
+.venv/
+env/
+
+# Bloqueo de secretos
+.env
+core/config/keys.py
+*.pem
+EOF
