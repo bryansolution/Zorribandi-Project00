@@ -1,0 +1,29 @@
+name: "Zorri-Audit-Automatizado"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  analyze:
+    name: Análisis de Vulnerabilidades
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v3
+
+    - name: Inicializar CodeQL (Motor de Búsqueda de Fallos)
+      uses: github/codeql-action/init@v2
+      with:
+        languages: python # O el lenguaje que uses
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
+
+    - name: Ejecutar Análisis
+      uses: github/codeql-action/analyze@v2
