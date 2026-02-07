@@ -9,3 +9,4 @@
 Un script básico para detectar puertos abiertos.
 **Uso:**
 `python zorri_scanner.py`
+: > 🛡️ Vigilado por el sistema de alertas de Zorribandi.
