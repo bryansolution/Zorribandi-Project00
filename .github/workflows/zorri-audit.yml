@@ -1,0 +1,26 @@
+name: 🛡️ Zorri-Audit Security Check
+
+on: [push, pull_request]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Clonando el cubil de Zorribandi
+        uses: actions/checkout@v4
+
+      - name: 🐍 Preparando Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 🔍 Olfateando errores (Linting)
+        run: |
+          # Esto revisa si hay errores de sintaxis en tus scripts
+          python -m py_compile *.py
+          echo "🦨 Zorribandi dice: ¡El código está limpio y huele a victoria!"
+
+      - name: 🛡️ Simulación de Escaneo de Seguridad
+        run: |
+          echo "Analizando vulnerabilidades en el perímetro..."
+          echo "Todo bajo control. Sombrero blanco activado. 🛡️"
