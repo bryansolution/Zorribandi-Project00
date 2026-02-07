@@ -1,0 +1,22 @@
+# 🦨🛡️ ZORRIBANDI - ARSENAL DE SEGURIDAD MASIVA
+
+# --- [ RED Y RECONOCIMIENTO ] ---
+scapy           # Manipulación de paquetes y escaneo de bajo nivel
+python-nmap     # Interfaz de Python para Nmap
+requests        # Peticiones HTTP para auditoría web
+urllib3         # Gestión de conexiones seguras
+
+# --- [ CRIPTOGRAFÍA Y SEGURIDAD ] ---
+cryptography    # Cifrado de datos y manejo de llaves
+pycryptodome    # Protocolos criptográficos avanzados
+python-dotenv   # Gestión de variables de entorno (.env) para OPSEC
+
+# --- [ EXTRACCIÓN Y ANÁLISIS ] ---
+beautifulsoup4  # Scraping de inteligencia (OSINT)
+lxml            # Procesador de datos XML/HTML rápido
+pandas          # Análisis de grandes volúmenes de datos (Big Data Security)
+
+# --- [ UTILIDADES ] ---
+colorama        # Formato de colores para la terminal Zorribandi
+shodan          # Integración con el buscador Shodan (requiere API)
+tqdm            # Barras de progreso para escaneos masivos
