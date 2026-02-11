@@ -1,0 +1,33 @@
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-02-10 23:22 -0500
+Stats: 0:00:01 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 7.75% done; ETC: 23:22 (0:00:12 remaining)
+Stats: 0:00:03 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 10.93% done; ETC: 23:23 (0:00:24 remaining)
+Stats: 0:00:04 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 12.13% done; ETC: 23:23 (0:00:29 remaining)
+Stats: 0:00:05 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 14.53% done; ETC: 23:23 (0:00:29 remaining)
+Stats: 0:00:06 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 16.30% done; ETC: 23:23 (0:00:31 remaining)
+Stats: 0:00:06 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 16.37% done; ETC: 23:23 (0:00:31 remaining)
+Stats: 0:00:12 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 27.06% done; ETC: 23:23 (0:00:32 remaining)
+Stats: 0:00:13 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 29.08% done; ETC: 23:23 (0:00:29 remaining)
+Stats: 0:00:13 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 29.98% done; ETC: 23:23 (0:00:30 remaining)
+Stats: 0:00:42 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 91.00% done; ETC: 23:23 (0:00:04 remaining)
+Nmap scan report for 192.168.0.1
+Host is up (0.080s latency).
+Not shown: 994 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE
+80/tcp   open     http
+443/tcp  open     https
+5000/tcp open     upnp
+5989/tcp filtered wbem-https
+8081/tcp filtered blackice-icecap
+8082/tcp filtered blackice-alerts
+
+Nmap done: 1 IP address (1 host up) scanned in 50.05 seconds
