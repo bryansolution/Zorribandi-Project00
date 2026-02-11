@@ -1,0 +1,2 @@
+[i] Escaneo 'vuln' en puerto 5000: Sin vulnerabilidades triviales detectadas.
+[?] Iniciando bypass de firewall en puerto 8081.
