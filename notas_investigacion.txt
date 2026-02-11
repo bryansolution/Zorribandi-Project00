@@ -2,3 +2,4 @@
 [?] Iniciando bypass de firewall en puerto 8081.
 [Wed Feb 11 00:11:34 EST 2026] Arsenal de herramientas actualizado (nmap, python, dnsutils).
 [Wed Feb 11 00:13:37 EST 2026] Update completo: Nmap version 7.98 ( https://nmap.org )
+[Wed Feb 11 00:32:12 EST 2026] Iniciando fase de análisis web con curl y nmap.
