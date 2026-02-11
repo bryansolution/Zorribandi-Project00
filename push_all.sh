@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Script de subida rápida para Zorribandi 🦨🛡️
+
+# Si no escribes un mensaje, usa uno por defecto
+MENSAJE=${1:-"Actualización de seguridad por Zorribandi 🦨🛡️"}
+
+echo -e "\e[1;34m[+] Preparando archivos... 🦨\e[0m"
+git add .
+
+echo -e "\e[1;32m[+] Firmando commit: $MENSAJE\e[0m"
+git commit -m "$MENSAJE"
+
+echo -e "\e[1;36m[+] Subiendo a GitHub... 🛡️\e[0m"
+git push origin main
+
+echo -e "\e[1;32m[!] ¡Misión cumplida! Todo en la nube. 🦨🛡️\e[0m"
+
+chmod +x push_all.sh
+
+
